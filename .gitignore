@@ -1,0 +1,21 @@
+# Editor/IDE files
+*.idea/
+*.sublime-project
+*.sublime-workspace
+*.vim
+*.vscode
+
+# Unimportant OS-specific files
+.DS_Store
+
+# Debug files
+*.log
+
+# Packages (deep)
+node_modules/
+
+# Generated builds (deep)
+dist/
+
+# Jest coverage results (deep)
+coverage/

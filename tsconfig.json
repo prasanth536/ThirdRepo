@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "exactOptionalPropertyTypes": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "lib": ["ESNext", "DOM"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "noEmit": false, // required to enable Babel (via ts-loader) to process resulting JS
+    "noErrorTruncation": true, // make sure TSC errors aren't truncated and fully readable
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noUncheckedIndexedAccess": true,
+    "paths": {
+      // for aliases, also config eslint.config.mjs, webpack.config.mjs, and jest.config.mjs
+      "testingUtility": ["./tools/tests/testingUtility.ts"]
+    },
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "strict": true,
+    "strictNullChecks": true, // required by `exactOptionalPropertyTypes`
+    "target": "ESNext", // latest version of ES supported by TypeScript version in use
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/globals.d.ts",
+      "./tools/tests/globals.d.ts"
+    ],
+    "useDefineForClassFields": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "*.ts",
+    "*.mts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "tools/**/*.ts",
+    "tools/**/*.mts"
+  ]
+}
